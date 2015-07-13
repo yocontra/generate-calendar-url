@@ -28,7 +28,25 @@ npm install generate-calendar-url --save
 ## Example
 
 ```js
-EXAMPLEHERE
+var cal = require('generate-calendar-url');
+
+// title, start, and end are required
+var event = {
+  title: 'BDay Bash',
+  start: new Date('July 20, 2020 19:00'),
+  end: new Date('July 20, 2020 22:00'),
+  location: '123 Fake St',
+  description: 'Johnny is having a blowout'
+};
+
+console.log(cal.google(event));
+// https://www.google.com/calendar/render?action=TEMPLATE&text=BDay%20Bash&dates=20200721T020000Z%2F20200721T050000Z&details=Johnny%20is%20having%20a%20blowout&location=123%20Fake%20St
+
+console.log(cal.ical(event));
+// data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:20200721T020000Z%0ADTEND:20200721T050000Z%0ASUMMARY:BDay%20Bash%0ADESCRIPTION:Johnny%20is%20having%20a%20blowout%0ALOCATION:123%20Fake%20St%0AEND:VEVENT%0AEND:VCALENDAR
+
+console.log(cal.outlook(event));
+// data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:20200721T020000Z%0ADTEND:20200721T050000Z%0ASUMMARY:BDay%20Bash%0ADESCRIPTION:Johnny%20is%20having%20a%20blowout%0ALOCATION:123%20Fake%20St%0AEND:VEVENT%0AEND:VCALENDAR
 ```
 
 ## LICENSE

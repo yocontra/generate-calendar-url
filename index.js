@@ -1,7 +1,11 @@
 'use strict';
 
+var ics = require('./lib/ics');
+var google = require('./lib/google');
+
 module.exports = {
-  google: require('./lib/google'),
-  outlook: require('./lib/ics'),
-  ical: require('./lib/ics')
+  google: google,
+  outlook: ics,
+  ical: ics,
+  ics: ics
 };
