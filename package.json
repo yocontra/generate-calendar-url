@@ -1,7 +1,7 @@
 {
   "name": "generate-calendar-url",
   "description": "generate a url to add an event to your calendar",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "homepage": "http://github.com/wearefractal/generate-calendar-url",
   "repository": "git://github.com/wearefractal/generate-calendar-url.git",
   "author": "Fractal contact@wearefractal.com (http://wearefractal.com)",
